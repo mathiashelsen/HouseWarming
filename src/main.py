@@ -11,7 +11,7 @@ hysteresis = 0.5
 calendar = dict()
 
 currentTemp = 21.0
-targetTemp = defTemp
+targetTemp = defaultTemp
 statusCV = False
 
 errLog.write('# Script started execution\n')
@@ -35,7 +35,6 @@ else:
     errLog.write('# Insufficient settings provided\n')
     errLog.flush()
 
-print defTemp, hyst
 print calendar
 
 while(True):
