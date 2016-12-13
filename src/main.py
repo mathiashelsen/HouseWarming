@@ -13,6 +13,7 @@ errLog.write('# Script started execution\n')
 errLog.write('# ' + str(datetime.today()) + '\n')
 errLog.flush()
 
+print settings.shape
 if(settings.shape[1] > 2):
     defTemp = settings[0,0]
     hyst = settings[1,0]
