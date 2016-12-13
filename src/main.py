@@ -1,7 +1,9 @@
 #!/usr/bin/python2.7
-
 import numpy as np
 from datetime import datetime
+
+def getTemp():
+    return 20.0
 
 settings = np.genfromtxt('/home/pi/HouseWarming/examples/normal.csv', delimiter=';')
 errLog = file('/home/pi/houseWarming.log', 'a')
@@ -10,7 +12,7 @@ defaultTemp = 10.0
 hysteresis = 0.5
 calendar = dict()
 
-currentTemp = 21.0
+currentTemp = defaultTemp
 targetTemp = defaultTemp
 statusCV = False
 
