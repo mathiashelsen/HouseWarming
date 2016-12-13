@@ -64,11 +64,10 @@ try:
 
         # Apply control to the CV system
         if( currentTemp > targetTemp ):
-        statusCV = False
-        # CV Off
+	    statusCV = False
         else:
-        statusCV = True
-        # CV On
+	    statusCV = True
+
 except IOError as e:
     errLog.write('# Error during execution\n')
     errLog.write('# ' + str(datetime.today()) + '\n')
