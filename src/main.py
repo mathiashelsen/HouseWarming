@@ -51,19 +51,16 @@ try:
 
         # Look up the settings for today
         if datetime.today().weekday() in calendar.keys():
-        todaySettings = calendar[datetime.today().weekday()]
-        time = datetime.today().hour + datetime.today().minute/60.0
+	    todaySettings = calendar[datetime.today().weekday()]
+	    time = datetime.today().hour + datetime.today().minute/60.0
 
-        # Find the slot in which we are
-        for i in range(len(todaySettings)):
-            if( time >= todaySettings[i][0] and time < todaySettings[i][1]):
-                if(statusCV):
-                    targetTemp = todaySettings[i][2] + hysteresis
-                else:
-                    targetTemp = todaySettings[i][2] - hysteresis
-
-        print todaySettings
-        print targetTemp
+	    # Find the slot in which we are
+	    for i in range(len(todaySettings)):
+		if( time >= todaySettings[i][0] and time < todaySettings[i][1]):
+		    if(statusCV):
+			targetTemp = todaySettings[i][2] + hysteresis
+		    else:
+			targetTemp = todaySettings[i][2] - hysteresis
 
         # Apply control to the CV system
         if( currentTemp > targetTemp ):
