@@ -42,7 +42,7 @@ while(True):
     # Set default temperature as fallback
     if(statusCV):
 	targetTemp = defaultTemp + hysteresis
-    else
+    else:
 	targetTemp = defaultTemp - hysteresis
 
     # Look up the settings for today
