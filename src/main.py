@@ -55,7 +55,7 @@ while(True):
 	    if( time >= todaySettings[i][0] and time < todaySettings[i][1]):
 		if(statusCV):
 		    targetTemp = todaySettings[i][2] + hysteresis
-		else(statusCV):
+		else:
 		    targetTemp = todaySettings[i][2] - hysteresis
 
 	print todaySettings
