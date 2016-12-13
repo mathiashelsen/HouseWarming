@@ -3,7 +3,7 @@
 import numpy as np
 from datetime import datetime
 
-settings = np.genfromtxt('/home/pi/HouseWarming/example/normal.csv', delimiter=';')
+settings = np.genfromtxt('/home/pi/HouseWarming/examples/normal.csv', delimiter=';')
 errLog = file('/home/pi/houseWarming.log', 'a')
 
 defTemp = 10.0
