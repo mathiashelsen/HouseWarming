@@ -9,5 +9,5 @@ errLog = file('/home/pi/houseWarming.log', 'a')
 defTemp = 10.0
 hyst = 0.5
 
-errLog.write('# ' + datetime.today() + '\n')
+errLog.write('# ' + str(datetime.today()) + '\n')
 errLog.flush()
