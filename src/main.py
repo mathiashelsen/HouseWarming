@@ -43,6 +43,8 @@ try:
     print calendar
 
     while(True):
+	currentTemp = getTemp()
+
         # Set default temperature as fallback
         if(statusCV):
 	    targetTemp = defaultTemp + hysteresis
