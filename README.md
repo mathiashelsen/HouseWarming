@@ -5,6 +5,12 @@ Python scripts to run on a Raspberry Pi to control your central heating (on/off 
 
 Temperature input is provided by a DS18B20, and a relay switches replaces your old thermostat. Settings are imported from a human-readable CSV file.
 
+
+
+
+
+
+
 Copyright (c) 2016, Mathias Helsen
 All rights reserved.
 
