@@ -8,7 +8,7 @@ class ds18b20_sensor:
         self.delay = delay
         self.verbose=verbose
 
-    def initialize():
+    def initialize(self):
         lsOut = str(check_output('ls -l /sys/bus/w1/devices/', shell=True))
         if(self.verbose):
             print '# Output from searching for 1-wire devices:'
@@ -26,13 +26,13 @@ class ds18b20_sensor:
         if(self.verbose):
             print "# Found device, will be using address: ", self.address
 
-    def readRaw():
+    def readRaw(self):
         f = open(self.address, 'r')
         lines = f.readlines()
         f.close()
         return lines
  
-    def readTemp():
+    def readTemp(self):
         if(not self.initialized):
             self.initialize()
 
