@@ -36,7 +36,7 @@ class ds18b20_sensor:
         if(not self.initialized):
             self.initialize()
 
-        lines = readRaw()
+        lines = self.readRaw()
         if(self.verbose):
             print "# Read from 1-wire bus: "
             print lines
@@ -44,7 +44,7 @@ class ds18b20_sensor:
         currentTry = 1
         while (lines[0].strip()[-3:] != 'YES' and currentTry < self.tries):
             time.sleep(self.delay)
-            lines = readRaw()
+            lines = self.readRaw()
             if(self.verbose):
                 print "# Currently at try: ", currentTry
                 print "# Read from 1-wire bus: "
