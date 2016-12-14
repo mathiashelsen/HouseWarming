@@ -48,7 +48,7 @@ class ds18b20_sensor:
             raise IOError()
         else:
             upperIndex = lowerIndex + 6
-            self.address = '/sys/bus/w1/devices/' + lsOut[lowerIndex:upperIndex]
+            self.address = '/sys/bus/w1/devices/' + lsOut[lowerIndex:upperIndex] + '/w1_slave'
             self.initialized = True
             
         if(self.verbose):
