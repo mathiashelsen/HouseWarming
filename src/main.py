@@ -30,12 +30,11 @@
 
 import numpy as np
 from datetime import datetime
+from ds18b20_sensor import ds18b20_sensor
+import time
 
-def getTemp():
-    raise IOError('Could not read from temperature sensor')
-    return 20.0
-
-def initTempSensor():
+# First wait for complete boot and start-up
+time.sleep(60)
 
 settings = np.genfromtxt('/home/pi/HouseWarming/examples/normal.csv', delimiter=',')
 errLog = file('/home/pi/houseWarming.log', 'a')
