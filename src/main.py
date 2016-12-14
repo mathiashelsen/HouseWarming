@@ -6,6 +6,8 @@ def getTemp():
     raise IOError('Could not read from temperature sensor')
     return 20.0
 
+def initTempSensor():
+
 settings = np.genfromtxt('/home/pi/HouseWarming/examples/normal.csv', delimiter=',')
 errLog = file('/home/pi/houseWarming.log', 'a')
 
