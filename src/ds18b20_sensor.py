@@ -43,7 +43,7 @@ class ds18b20_sensor:
 
         currentTry = 1
         while (lines[0].strip()[-3:] != 'YES' and currentTry < self.tries):
-            time.sleep(0.2)
+            time.sleep(self.delay)
             lines = readRaw()
             if(self.verbose):
                 print "# Currently at try: ", currentTry
